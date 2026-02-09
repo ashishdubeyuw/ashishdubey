@@ -1,5 +1,5 @@
 import { motion } from 'framer-motion';
-import { ChevronDown, Download, Linkedin, Mail, MapPin } from 'lucide-react';
+import { ChevronDown, Download, Linkedin, Mail, MapPin, Plane } from 'lucide-react';
 import ashishProfile from '@/assets/ashish-profile.png';
 
 const HeroSection = () => {
@@ -18,7 +18,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, x: -50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="flex items-center gap-2 text-sm font-tech text-glow-cyan"
+          className="flex items-center gap-2 text-sm font-tech text-glow-cyan glass-card px-4 py-2 rounded-full"
         >
           <div className="w-2 h-2 rounded-full bg-glow-cyan animate-pulse" />
           <span>SYSTEM ONLINE</span>
@@ -30,7 +30,7 @@ const HeroSection = () => {
           initial={{ opacity: 0, x: 50 }}
           animate={{ opacity: 1, x: 0 }}
           transition={{ delay: 0.5, duration: 0.8 }}
-          className="flex items-center gap-2 text-sm font-tech text-muted-foreground"
+          className="flex items-center gap-2 text-sm font-tech text-muted-foreground glass-card px-4 py-2 rounded-full"
         >
           <MapPin className="w-4 h-4 text-glow-cyan" />
           <span>Lynnwood, WA, USA</span>
@@ -40,7 +40,7 @@ const HeroSection = () => {
       <div className="container mx-auto px-6 relative z-10">
         <div className="max-w-5xl mx-auto">
           <div className="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
-            {/* Profile Image */}
+            {/* Profile Image with Rotating Aircraft */}
             <motion.div
               initial={{ opacity: 0, scale: 0.8 }}
               animate={{ opacity: 1, scale: 1 }}
@@ -50,8 +50,29 @@ const HeroSection = () => {
               {/* Outer glow ring */}
               <div className="absolute inset-0 rounded-full bg-gradient-to-r from-glow-cyan to-glow-blue opacity-30 blur-xl animate-pulse" />
               
-              {/* HUD frame */}
-              <div className="relative">
+              {/* Rotating aircraft orbit */}
+              <div className="absolute inset-[-40px] md:inset-[-50px] lg:inset-[-60px] animate-[spin_8s_linear_infinite]">
+                {/* Aircraft 1 */}
+                <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
+                  <div className="relative">
+                    <Plane className="w-8 h-8 md:w-10 md:h-10 text-glow-cyan rotate-90 drop-shadow-[0_0_10px_rgba(0,212,255,0.8)]" />
+                    <div className="absolute inset-0 bg-glow-cyan/30 blur-md rounded-full" />
+                  </div>
+                </div>
+                {/* Aircraft 2 - opposite side */}
+                <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
+                  <div className="relative">
+                    <Plane className="w-6 h-6 md:w-8 md:h-8 text-glow-blue -rotate-90 drop-shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
+                    <div className="absolute inset-0 bg-glow-blue/30 blur-md rounded-full" />
+                  </div>
+                </div>
+              </div>
+
+              {/* Orbit ring */}
+              <div className="absolute inset-[-40px] md:inset-[-50px] lg:inset-[-60px] rounded-full border border-glow-cyan/20 border-dashed" />
+              
+              {/* Glassmorphism frame */}
+              <div className="relative glass-card rounded-full p-2">
                 {/* Corner brackets */}
                 <div className="absolute -top-3 -left-3 w-8 h-8 border-l-2 border-t-2 border-glow-cyan" />
                 <div className="absolute -top-3 -right-3 w-8 h-8 border-r-2 border-t-2 border-glow-cyan" />
@@ -70,7 +91,7 @@ const HeroSection = () => {
                 </div>
                 
                 {/* Status indicator */}
-                <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-1 bg-background/80 backdrop-blur-sm border border-glow-cyan/30 rounded-full">
+                <div className="absolute -bottom-1 left-1/2 -translate-x-1/2 flex items-center gap-2 px-4 py-1 glass-card border border-glow-cyan/30 rounded-full">
                   <div className="w-2 h-2 rounded-full bg-hud-green animate-pulse" />
                   <span className="text-xs font-tech text-glow-cyan uppercase tracking-wider">Available</span>
                 </div>
@@ -151,7 +172,7 @@ const HeroSection = () => {
                   href="https://linkedin.com/in/ashishdubeyuw"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="flex items-center gap-2 px-6 py-3 border border-border rounded-lg font-tech text-foreground hover:border-glow-cyan hover:text-glow-cyan transition-all duration-300"
+                  className="glass-card flex items-center gap-2 px-6 py-3 border border-border/50 rounded-lg font-tech text-foreground hover:border-glow-cyan hover:text-glow-cyan transition-all duration-300"
                 >
                   <Linkedin className="w-5 h-5" />
                   LinkedIn
@@ -159,7 +180,7 @@ const HeroSection = () => {
 
                 <a
                   href="mailto:ashishdubeyuw@gmail.com"
-                  className="flex items-center gap-2 px-6 py-3 border border-border rounded-lg font-tech text-foreground hover:border-glow-cyan hover:text-glow-cyan transition-all duration-300"
+                  className="glass-card flex items-center gap-2 px-6 py-3 border border-border/50 rounded-lg font-tech text-foreground hover:border-glow-cyan hover:text-glow-cyan transition-all duration-300"
                 >
                   <Mail className="w-5 h-5" />
                   Contact
@@ -181,7 +202,7 @@ const HeroSection = () => {
               { value: '0.001', label: 'Defect Density' },
               { value: '3', label: 'Trade Secrets' },
             ].map((stat, index) => (
-              <div key={index} className="card-glow p-4 rounded-lg corner-accents">
+              <div key={index} className="glass-card p-4 rounded-lg corner-accents hover:border-glow-cyan/50 transition-all duration-300">
                 <div className="text-2xl md:text-3xl font-display font-bold text-glow-cyan text-glow">
                   {stat.value}
                 </div>
