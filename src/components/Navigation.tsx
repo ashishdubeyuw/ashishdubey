@@ -18,6 +18,7 @@ const Navigation = () => {
     { label: 'Experience', href: '#experience' },
     { label: 'Skills', href: '#skills' },
     { label: 'Projects', href: '#projects' },
+    { label: 'Academia', href: '#academia' },
     { label: 'Education', href: '#education' },
     { label: 'Contact', href: '#contact' },
   ];

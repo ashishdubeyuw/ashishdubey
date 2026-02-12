@@ -8,37 +8,37 @@ const skillCategories = [
     icon: Cpu,
     title: 'Hardware Platforms',
     skills: ['PPC 750', 'MIPS RM7965', 'ARM A53', 'R5 Cortex', 'Xilinx Zynq'],
-    color: 'from-cyan-400 to-blue-500',
+    color: 'from-gray-300 to-gray-500',
   },
   {
     icon: Code,
     title: 'Programming',
     skills: ['Embedded C', 'Python', 'C#', 'SQL', 'MATLAB-Simulink'],
-    color: 'from-blue-400 to-purple-500',
+    color: 'from-gray-400 to-gray-600',
   },
   {
     icon: Wrench,
     title: 'Tools & Platforms',
     skills: ['DEOS', 'Green Hills RTOS', 'VxWorks', 'LabVIEW', 'EASE Simulation'],
-    color: 'from-teal-400 to-cyan-500',
+    color: 'from-gray-300 to-gray-500',
   },
   {
     icon: Shield,
     title: 'Standards & Protocols',
     skills: ['DO-178C', 'DO-254', 'A429', 'CAN', 'A664', 'RS422'],
-    color: 'from-emerald-400 to-teal-500',
+    color: 'from-gray-400 to-gray-600',
   },
   {
     icon: Database,
     title: 'Python Libraries',
     skills: ['Pandas', 'NumPy', 'PyTorch', 'Scikit-learn', 'Matplotlib'],
-    color: 'from-violet-400 to-blue-500',
+    color: 'from-gray-300 to-gray-500',
   },
   {
     icon: Rocket,
     title: 'Leadership',
     skills: ['Project Planning', 'Agile/CI', 'Risk Management', 'Team Mentorship', 'Client Relations'],
-    color: 'from-orange-400 to-amber-500',
+    color: 'from-gray-400 to-gray-600',
   },
 ];
 

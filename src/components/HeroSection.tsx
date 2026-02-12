@@ -48,21 +48,21 @@ const HeroSection = () => {
               className="relative flex-shrink-0"
             >
               {/* Outer glow ring */}
-              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-glow-cyan to-glow-blue opacity-30 blur-xl animate-pulse" />
+              <div className="absolute inset-0 rounded-full bg-gradient-to-r from-glow-cyan to-glow-blue opacity-20 blur-xl animate-pulse" />
               
               {/* Rotating aircraft orbit */}
               <div className="absolute inset-[-40px] md:inset-[-50px] lg:inset-[-60px] animate-[spin_8s_linear_infinite]">
                 {/* Aircraft 1 */}
                 <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-1/2">
                   <div className="relative">
-                    <Plane className="w-8 h-8 md:w-10 md:h-10 text-glow-cyan rotate-90 drop-shadow-[0_0_10px_rgba(0,212,255,0.8)]" />
-                    <div className="absolute inset-0 bg-glow-cyan/30 blur-md rounded-full" />
+                    <Plane className="w-8 h-8 md:w-10 md:h-10 text-glow-cyan rotate-90 drop-shadow-[0_0_10px_rgba(255,255,255,0.5)]" />
+                    <div className="absolute inset-0 bg-glow-cyan/20 blur-md rounded-full" />
                   </div>
                 </div>
                 {/* Aircraft 2 - opposite side */}
                 <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-1/2">
                   <div className="relative">
-                    <Plane className="w-6 h-6 md:w-8 md:h-8 text-glow-blue -rotate-90 drop-shadow-[0_0_10px_rgba(59,130,246,0.8)]" />
+                    <Plane className="w-6 h-6 md:w-8 md:h-8 text-glow-blue -rotate-90 drop-shadow-[0_0_10px_rgba(200,200,200,0.5)]" />
                     <div className="absolute inset-0 bg-glow-blue/30 blur-md rounded-full" />
                   </div>
                 </div>
@@ -80,7 +80,7 @@ const HeroSection = () => {
                 <div className="absolute -bottom-3 -right-3 w-8 h-8 border-r-2 border-b-2 border-glow-cyan" />
                 
                 {/* Profile image container */}
-                <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-2 border-glow-cyan/50 shadow-[0_0_40px_rgba(0,212,255,0.3)]">
+                <div className="relative w-48 h-48 md:w-64 md:h-64 lg:w-72 lg:h-72 rounded-full overflow-hidden border-2 border-glow-cyan/50 shadow-[0_0_40px_rgba(255,255,255,0.15)]">
                   <img
                     src={ashishProfile}
                     alt="Ashish Dubey - Senior Embedded Software Architect"
