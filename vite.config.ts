@@ -6,7 +6,8 @@ import { componentTagger } from "lovable-tagger";
 const getProductionBase = () => {
   const explicitBase = process.env.BASE_PATH;
   if (explicitBase) {
-    return explicitBase.startsWith("/") ? explicitBase : `/${explicitBase}`;
+    const normalized = explicitBase.startsWith("/") ? explicitBase : `/${explicitBase}`;
+    return normalized.endsWith("/") ? normalized : `${normalized}/`;
   }
 
   const repository = process.env.GITHUB_REPOSITORY?.split("/")[1];
