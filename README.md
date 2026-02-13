@@ -62,7 +62,23 @@ This project is built with:
 
 ## How can I deploy this project?
 
-Simply open [Lovable](https://lovable.dev/projects/REPLACE_WITH_PROJECT_ID) and click on Share -> Publish.
+This repo is now configured to deploy to **GitHub Pages** using the workflow at `.github/workflows/deploy-pages.yml` whenever you push to `main` or `master`.
+
+1. In GitHub, go to **Settings → Pages**.
+2. Under **Build and deployment**, set **Source** to **GitHub Actions**.
+3. Push to `main` or `master` (or run the workflow manually from the Actions tab).
+4. Open: `https://ashishdubeyuw.github.io/ashishdubey/` after the workflow finishes.
+
+> This app auto-detects the repo name for production builds on GitHub Actions (`GITHUB_REPOSITORY`) and falls back to `/ashishdubey/`.
+> You can override manually with `BASE_PATH=/your-repo/ npm run build`.
+
+For local verification:
+
+```sh
+npm ci
+npm run build
+npm run preview
+```
 
 ## Can I connect a custom domain to my Lovable project?
 
