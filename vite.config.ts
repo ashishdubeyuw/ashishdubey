@@ -3,9 +3,23 @@ import react from "@vitejs/plugin-react-swc";
 import path from "path";
 import { componentTagger } from "lovable-tagger";
 
+const getProductionBase = () => {
+  const explicitBase = process.env.BASE_PATH;
+  if (explicitBase) {
+    return explicitBase.startsWith("/") ? explicitBase : `/${explicitBase}`;
+  }
+
+  const repository = process.env.GITHUB_REPOSITORY?.split("/")[1];
+  if (repository) {
+    return `/${repository}/`;
+  }
+
+  return "/ashishdubey/";
+};
+
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "./" : "/",
+  base: mode === "production" ? getProductionBase() : "/",
   server: {
     host: "::",
     port: 8080,
