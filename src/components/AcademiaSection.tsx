@@ -96,7 +96,7 @@ const academiaProjects = [
   },
   {
     icon: Mic,
-    title: 'MedScribe v1',
+    title: 'MedScribe',
     subtitle: 'Edge-Aware Clinical Audio Transcription Architecture',
     description: 'Real-time medical transcription pipeline designed for edge clinical environments. Captures patient-doctor interactions and leverages AI to synthesize structured SOAP notes, minimizing computational overhead.',
     problem: 'Manual clinical documentation creates cognitive overload for physicians and detracts from patient-centric interactions.',
