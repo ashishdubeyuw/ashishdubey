@@ -73,6 +73,69 @@ const academiaProjects = [
     ],
     category: 'RAG • Agentic AI',
   },
+  {
+    icon: Cpu,
+    title: 'AeroEngine ML Diagnostics',
+    subtitle: 'Predictive Maintenance Engine for Aerospace Systems',
+    description: 'Machine learning architecture designed to estimate Remaining Useful Life (RUL) of turbofan engines using NASA C-MAPSS FD004 telemetry data. Employs robust feature engineering for mission-critical hardware degradation forecasting.',
+    problem: 'Preventative maintenance schedules are inefficient. Aircraft turbines require condition-based prognostic architectures to prevent catastrophic failures.',
+    tech: ['Python', 'Streamlit', 'Scikit-Learn', 'Sensor Fusion', 'Time-Series Analysis'],
+    stats: [
+      { label: 'Sensor Channels', value: '21' },
+      { label: 'Dataset', value: 'FD004' },
+      { label: 'Deployment', value: 'Cloud Edge' },
+      { label: 'Latency', value: '<500ms' },
+    ],
+    highlights: [
+      'Processed multivariate time-series data from 21 continuous sensor channels per engine cycle.',
+      'Implemented RUL regression models utilizing a sliding window mechanism for spatial temporal feature extraction.',
+      'Deployed a master-slave controller pattern in Streamlit for deterministic real-time visualization of degradation.',
+      'Optimized hyperparameter tuning for robust performance across multiple fault modes.'
+    ],
+    category: 'Predictive Maintenance • ML',
+  },
+  {
+    icon: Mic,
+    title: 'MedScribe v1',
+    subtitle: 'Edge-Aware Clinical Audio Transcription Architecture',
+    description: 'Real-time medical transcription pipeline designed for edge clinical environments. Captures patient-doctor interactions and leverages AI to synthesize structured SOAP notes, minimizing computational overhead.',
+    problem: 'Manual clinical documentation creates cognitive overload for physicians and detracts from patient-centric interactions.',
+    tech: ['React', 'Vite', 'Audio Worklets', 'LLM Orchestration', 'Web Audio API'],
+    stats: [
+      { label: 'Audio Latency', value: '<100ms' },
+      { label: 'Architecture', value: 'Edge-Heavy' },
+      { label: 'Target Output', value: 'SOAP Notes' },
+      { label: 'Processing', value: 'Asynchronous' }
+    ],
+    highlights: [
+      'Engineered low-latency audio capture pipelines leveraging browser-native Audio Worklets.',
+      'Architected a streaming inference client for robust parsing of clinical domain-specific vocabulary.',
+      'Implemented a master-slave state synchronization model to render real-time transcription without blocking the main UI thread.',
+      'Built a high-performance, edge-cacheable frontend hierarchy using Vite and React.'
+    ],
+    category: 'Healthcare AI • IoT Processing',
+  },
+  {
+    icon: Globe,
+    title: 'CivicPulse AI Navigator',
+    subtitle: 'Distributed AI Abstraction for Municipal Services',
+    description: 'Distributed web platform architected to process and route complex civic service requests. Functions as an intelligent abstraction layer over fragmented government data with a highly available multi-language processing engine.',
+    problem: 'Navigating disjointed municipal APIs and bureaucratic documentation creates high architectural friction for end-users.',
+    tech: ['Typescript', 'React', 'Agentic LLM', 'RAG', 'Serverless'],
+    stats: [
+      { label: 'Data Sources', value: 'Seattle/WA' },
+      { label: 'Topology', value: 'Serverless Edge' },
+      { label: 'Routing', value: 'Deterministic' },
+      { label: 'Languages', value: 'Multi-lingual' }
+    ],
+    highlights: [
+      'Designed a deterministic prompt-chaining pipeline grounded in official Seattle and King County schemas.',
+      'Decoupled monolithic civic data into accessible, low-latency micro-interactions via headless UI paradigms.',
+      'Orchestrated a master-slave multi-lingual query router for rapid cross-language payload handling.',
+      'Deployed via serverless edge architecture to guarantee CDN-level caching and high fault tolerance.'
+    ],
+    category: 'Civic Tech • Multi-Agent Systems',
+  }
 ];
 
 const AcademiaCard = ({ project, index }: { project: typeof academiaProjects[0]; index: number }) => {
