@@ -1,7 +1,7 @@
 import { motion } from 'framer-motion';
 import { useInView } from 'framer-motion';
 import { useRef } from 'react';
-import { Eye, Brain, Target, Code, Cpu, Layers, Globe, Mic, Camera, Search } from 'lucide-react';
+import { Eye, Brain, Target, Cpu, Globe, Mic, Trophy } from 'lucide-react';
 
 const academiaProjects = [
   {
@@ -26,6 +26,7 @@ const academiaProjects = [
       'Production-grade 1,000-entry ring buffer logging system',
     ],
     category: 'Computer Vision • PWA',
+    award: '#1 Award • GenAI Summit',
   },
   {
     icon: Brain,
@@ -169,6 +170,12 @@ const AcademiaCard = ({ project, index }: { project: typeof academiaProjects[0];
               <p className="text-sm font-tech text-muted-foreground">
                 {project.subtitle}
               </p>
+              {project.award && (
+                <div className="mt-2 inline-flex items-center gap-1.5 px-2 py-1 rounded border border-warning-orange/40 bg-warning-orange/10 text-warning-orange text-[10px] font-tech uppercase tracking-wider">
+                  <Trophy className="w-3 h-3" />
+                  <span>{project.award}</span>
+                </div>
+              )}
             </div>
           </div>
         </div>
