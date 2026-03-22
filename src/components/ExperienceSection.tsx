@@ -42,7 +42,7 @@ const experiences = [
   },
   {
     company: 'Alten',
-    location: 'Bengaluru, INDIA',
+    location: 'Bengaluru, IND',
     roles: [
       {
         title: 'Software Engineer',
