@@ -6,7 +6,7 @@ import { Briefcase, Calendar, MapPin, ChevronRight } from 'lucide-react';
 const experiences = [
   {
     company: 'Honeywell Aerospace',
-    location: 'Phoenix, USA',
+    location: 'Phoenix, USA and Bengaluru, IND',
     roles: [
       {
         title: 'Senior Advanced Embedded Engineer',
